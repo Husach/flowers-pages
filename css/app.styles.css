@@ -269,15 +269,17 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 10px;
   overflow: hidden; }
   .preview__card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
+    width: 256px;
     height: 250px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding: 0 50px; }
   .preview__img {
     width: 120px;
     height: 120px; }
