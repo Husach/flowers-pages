@@ -94,7 +94,7 @@ body {
   max-width: 1280px;
   height: calc(160px - 50px);
   margin: 0 auto; }
-  .header:after {
+  .header::after {
     content: 'flowet';
     position: absolute;
     height: 80px;
@@ -104,7 +104,7 @@ body {
     font-size: 72px;
     line-height: 150px;
     font-style: italic; }
-  .header:before {
+  .header::before {
     content: '\41C\44B   \43F\435\440\435\434\430\434\438\43C   \412\430\448\443   \437\430\431\43E\442\443';
     position: absolute;
     height: 30px;
@@ -146,6 +146,9 @@ body {
       margin-left: 10px;
       font-size: 12px;
       line-height: 14px; }
+    .header__basket--data {
+      flex-direction: column;
+      align-items: flex-start; }
 
 @media only screen and (max-width: 1500px) {
   .header {
@@ -295,7 +298,7 @@ body {
   flex-wrap: wrap;
   padding-top: 10px;
   overflow: hidden; }
-  .preview:hover:after {
+  .preview:hover::after {
     content: '';
     position: absolute; }
   .preview__card {
@@ -366,7 +369,7 @@ body {
       text-decoration: underline; }
 
 .order__title {
-  padding: 20px;
+  padding-top: 20px;
   font-size: 24px;
   text-align: center;
   text-decoration: underline; }
@@ -378,22 +381,31 @@ body {
   margin-bottom: 20px; }
   .order__item-img {
     width: 150px;
-    height: 150px; }
+    height: 150px;
+    margin-right: 20px; }
   .order__item-name {
-    width: 550px; }
+    flex-grow: 1; }
   .order__item-cost {
     width: 150px;
     font-size: 20px;
     text-align: right; }
-  .order__item--post-card .calc {
-    visibility: hidden; }
 
 .order__summary {
   display: flex;
-  justify-content: flex-end; }
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #888; }
   .order__summary-wrapper {
-    width: 400px;
-    border-top: 1px solid #ccc; }
+    width: 400px; }
+  .order__summary-item {
+    font-size: 24px;
+    line-height: 48px;
+    border-bottom: 1px solid #ccc; }
+    .order__summary-item:first-child {
+      flex-grow: 1; }
+  .order__summary-row {
+    display: flex;
+    justify-content: space-between; }
 
 .order__extra-title {
   text-align: center;
